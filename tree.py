@@ -71,7 +71,8 @@ def create_tree():
     j += 1
 
   star_color = config["star"]
-  star_padded = f"            {fg(star_color)}{STAR}{style.RESET}"
+  star_colored = f"{fg(star_color)}{STAR}{style.RESET}"
+  star_padded = star_colored.center(SCREEN_WIDTH + (len(star_colored) - 2))
   return [line.center(SCREEN_WIDTH) for line in (star_padded, *body, trunk)]
 
 
