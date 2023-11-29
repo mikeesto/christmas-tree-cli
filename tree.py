@@ -1,5 +1,5 @@
 from random import randrange
-from colored import fg, style
+from colored import fg, Style
 import json
 
 try:
@@ -42,7 +42,7 @@ def change_char(string):
     if string[idx] != ' ' and string[idx] == '_':
       # rand = randrange(256)
       color = config[f"ball{ball_id}"]
-      string[idx] = f"{fg(color)}●{style.RESET}"
+      string[idx] = f"{fg(color)}●{Style.RESET}"
       ball_id += 1
   return ''.join(string)
 
@@ -71,7 +71,7 @@ def create_tree():
     j += 1
 
   star_color = config["star"]
-  star_colored = f"{fg(star_color)}{STAR}{style.RESET}"
+  star_colored = f"{fg(star_color)}{STAR}{Style.RESET}"
   star_padded = star_colored.center(SCREEN_WIDTH + (len(star_colored) - 2))
   return [line.center(SCREEN_WIDTH) for line in (star_padded, *body, trunk)]
 
