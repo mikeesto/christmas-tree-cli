@@ -1,5 +1,3 @@
-# https://paste.ee/r/P4gE8
-
 mkdir festive_tree
 cd festive_tree
 wget https://raw.githubusercontent.com/mikeesto/christmas-tree-cli/master/tree.py
